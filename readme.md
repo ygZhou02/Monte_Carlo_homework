@@ -6,6 +6,8 @@
 
 This project is an implementation of monte carlo tree search on TicTacToe game. Via enough simulation, we draw to the conclusion that if both two players of a TicTacToe game are smart enough, the game will wind up with a draw with full certainty. The following parts of this document illustrate how this project implement a TicTacToe game and how to accomplish monte carlo tree search. Additional work such as $$\alpha$$-$$\beta$$ pruning will be done in a foreseeable future. To some extent this work may probably lay a foundation for AI based on Monte-Carlo method on more complicated games including Chinese Chess and Board Game Go.
 
+If you want to train an AI to play and see how it works, execute ```python  main.py```. Requirements mainly include numpy and pygame.
+
 ## Game settings
 
 The class TicTacToe maintains a TicTacToe game, serving functions of showing chessboard, making moves and judging whether the game end. If one player makes 3 pieces in a row (or column, diagonal), he/she will win the game.
@@ -27,6 +29,12 @@ In Monte Carlo tree search, each agent will complete enough episodes (e.g. 3000 
 ![](tree.JPG)
 
 After thousands of episodes of Monte Carlo simulation, choose the child of the root with the best winning rate and return it as action output. Each player takes action via this Monte Carlo simulation. You can see more implement details in codes.
+
+## Visualization
+
+I implement a visualization board for the game training. Whenever you start main.py for training, you could see the visualization window.
+
+<img src="visualization.JPG" style="zoom: 50%;" />
 
 ## Further work
 
